@@ -12,7 +12,7 @@ more info:
 - [x] Create Stacked Base Project with CLI
 - [x] Create View with CLI
 - [x] Startup Logic
-- [ ] Navigation
+- [x] Navigation
 - [x] Learn Service when Login
 - [ ] Form Basics
 - [ ] Service Locator
