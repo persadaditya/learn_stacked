@@ -17,7 +17,8 @@ class CounterView extends StackedView<CounterViewModel> {
       body: Container(
         padding: const EdgeInsets.only(left: 25.0, right: 25.0),
         child: Center(
-          child: Text('${viewModel.counter}',
+          child: Text(
+            '${viewModel.counter}',
             style: const TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.bold,
@@ -31,7 +32,6 @@ class CounterView extends StackedView<CounterViewModel> {
       ),
     );
   }
-
 
   @override
   CounterViewModel viewModelBuilder(

@@ -11,9 +11,9 @@ more info:
 ### Key point to learn
 - [x] Create Stacked Base Project with CLI
 - [x] Create View with CLI
-- [ ] Startup Logic
+- [x] Startup Logic
 - [ ] Navigation
-- [ ] Learn Service when Login
+- [x] Learn Service when Login
 - [ ] Form Basics
 - [ ] Service Locator
 - [ ] Learn ViewModel

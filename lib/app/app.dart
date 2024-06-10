@@ -5,6 +5,8 @@ import 'package:learn_stacked/ui/views/startup/startup_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:learn_stacked/ui/views/counter/counter_view.dart';
+import 'package:learn_stacked/ui/views/login/login_view.dart';
+import 'package:learn_stacked/services/authentication_service.dart';
 // @stacked-import
 
 @StackedApp(
@@ -12,13 +14,15 @@ import 'package:learn_stacked/ui/views/counter/counter_view.dart';
     MaterialRoute(page: HomeView),
     MaterialRoute(page: StartupView),
     MaterialRoute(page: CounterView),
+    MaterialRoute(page: LoginView),
 // @stacked-route
   ],
   dependencies: [
     LazySingleton(classType: BottomSheetService),
     LazySingleton(classType: DialogService),
     LazySingleton(classType: NavigationService),
-    // @stacked-service
+    LazySingleton(classType: AuthenticationService),
+// @stacked-service
   ],
   bottomsheets: [
     StackedBottomsheet(classType: NoticeSheet),
