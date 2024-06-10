@@ -24,10 +24,12 @@ import 'package:learn_stacked/ui/views/text_reverse/text_reverse_view.dart';
     MaterialRoute(page: TextReverseView),
 // @stacked-route
   ],
-  dependencies: [
+  dependencies: [ ///here you define service
     LazySingleton(classType: BottomSheetService),
     LazySingleton(classType: DialogService),
-    LazySingleton(classType: NavigationService),
+    LazySingleton(classType: NavigationService,
+      environments: {Environment.dev}
+    ),
     LazySingleton(classType: AuthenticationService),
 // @stacked-service
   ],

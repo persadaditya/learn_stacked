@@ -15,7 +15,7 @@ more info:
 - [x] Navigation
 - [x] Learn Service when Login
 - [x] Form Basics
-- [ ] Service Locator
+- [x] Service Locator
 - [ ] Learn ViewModel
 - [ ] Services
 - [ ] Logger
