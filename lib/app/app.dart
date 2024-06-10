@@ -7,11 +7,11 @@ import 'package:stacked_services/stacked_services.dart';
 import 'package:learn_stacked/ui/views/counter/counter_view.dart';
 import 'package:learn_stacked/ui/views/login/login_view.dart';
 import 'package:learn_stacked/services/authentication_service.dart';
+import 'package:learn_stacked/ui/views/text_reverse/text_reverse_view.dart';
 // @stacked-import
 
 @StackedApp(
   routes: [
-
     MaterialRoute(page: HomeView),
     MaterialRoute(page: StartupView),
     // this is if you want custom transition
@@ -21,6 +21,7 @@ import 'package:learn_stacked/services/authentication_service.dart';
     // ),
     MaterialRoute(page: CounterView),
     MaterialRoute(page: LoginView),
+    MaterialRoute(page: TextReverseView),
 // @stacked-route
   ],
   dependencies: [

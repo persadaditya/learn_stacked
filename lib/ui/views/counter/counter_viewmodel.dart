@@ -9,7 +9,7 @@ class CounterViewModel extends BaseViewModel {
   int _counter = 0;
   int get counter => _counter;
 
-  updateCounterFromHome(int data){
+  updateCounterFromHome(int data) {
     _counter = data;
     rebuildUi();
   }
@@ -19,7 +19,7 @@ class CounterViewModel extends BaseViewModel {
     rebuildUi();
   }
 
-  void backToHome(){
+  void backToHome() {
     _navigationService.back(result: 'From back: $counter');
   }
 }

@@ -13,6 +13,7 @@ class HomeViewModel extends BaseViewModel {
 
   String get counterLabel => 'Counter is: $_counter';
   String get buttonLabel => 'Go to counter view';
+  String get buttonFormLabel => 'Go To Form view';
 
   int _counter = 0;
 
@@ -21,11 +22,17 @@ class HomeViewModel extends BaseViewModel {
     rebuildUi();
   }
 
-  void goToCounterView()async{
+  void goToCounterView() async {
     final result = await _navigationService.navigateToCounterView(
         startIndex: 5,
-      transition: TransitionsBuilders.fadeIn //this is transition when navigating
-    );
+        transition:
+            TransitionsBuilders.fadeIn //this is transition when navigating
+        );
+    print('returned result: $result');
+  }
+
+  void goToFormView() async {
+    final result = await _navigationService.navigateToTextReverseView(); //this is transition when navigating);
     print('returned result: $result');
   }
 

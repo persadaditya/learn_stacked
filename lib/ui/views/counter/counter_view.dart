@@ -13,7 +13,6 @@ class CounterView extends StackedView<CounterViewModel> {
     CounterViewModel viewModel,
     Widget? child,
   ) {
-
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(

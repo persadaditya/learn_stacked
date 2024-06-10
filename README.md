@@ -14,7 +14,7 @@ more info:
 - [x] Startup Logic
 - [x] Navigation
 - [x] Learn Service when Login
-- [ ] Form Basics
+- [x] Form Basics
 - [ ] Service Locator
 - [ ] Learn ViewModel
 - [ ] Services
