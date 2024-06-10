@@ -676,4 +676,14 @@ class MockDialogService extends _i1.Mock implements _i2.DialogService {
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockAuthenticationService extends _i1.Mock
-    implements _i7.AuthenticationService {}
+    implements _i7.AuthenticationService {
+  @override
+  bool userLoggedIn() => (super.noSuchMethod(
+        Invocation.method(
+          #userLoggedIn,
+          [],
+        ),
+        returnValue: false,
+        returnValueForMissingStub: false,
+      ) as bool);
+}

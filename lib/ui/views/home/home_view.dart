@@ -6,7 +6,8 @@ import 'package:learn_stacked/ui/common/ui_helpers.dart';
 import 'home_viewmodel.dart';
 
 class HomeView extends StackedView<HomeViewModel> {
-  const HomeView({Key? key}) : super(key: key);
+  final int startingIndex;
+  const HomeView({Key? key, required this.startingIndex}) : super(key: key);
 
   @override
   Widget builder(
@@ -40,6 +41,15 @@ class HomeView extends StackedView<HomeViewModel> {
                       onPressed: viewModel.incrementCounter,
                       child: Text(
                         viewModel.counterLabel,
+                        style: const TextStyle(color: Colors.white),
+                      ),
+                    ),
+                    verticalSpaceMedium,
+                    MaterialButton(
+                      color: Colors.black,
+                      onPressed: viewModel.goToCounterView,
+                      child: Text(
+                        viewModel.buttonLabel,
                         style: const TextStyle(color: Colors.white),
                       ),
                     ),

@@ -14,7 +14,8 @@ class StartupViewModel extends BaseViewModel {
     // 2. Check if the user is logged in
     if (_authenticationService.userLoggedIn()) {
       // 3. Navigate to HomeView
-      _navigationService.replaceWith(Routes.homeView);
+      final result = await _navigationService.replaceWithHomeView(startingIndex: 0);
+      print('Returned result: $result');
     } else {
       // 4. Or navigate to LoginView
       _navigationService.replaceWith(Routes.loginView);

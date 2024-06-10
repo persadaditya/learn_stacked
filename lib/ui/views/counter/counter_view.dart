@@ -4,7 +4,8 @@ import 'package:stacked/stacked.dart';
 import 'counter_viewmodel.dart';
 
 class CounterView extends StackedView<CounterViewModel> {
-  const CounterView({Key? key}) : super(key: key);
+  final int startIndex;
+  const CounterView({Key? key, required this.startIndex}) : super(key: key);
 
   @override
   Widget builder(
@@ -12,8 +13,14 @@ class CounterView extends StackedView<CounterViewModel> {
     CounterViewModel viewModel,
     Widget? child,
   ) {
+
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
+      appBar: AppBar(
+        leading: IconButton(
+            onPressed: viewModel.backToHome,
+            icon: const Icon(Icons.arrow_back_ios_sharp)),
+      ),
       body: Container(
         padding: const EdgeInsets.only(left: 25.0, right: 25.0),
         child: Center(
@@ -31,6 +38,12 @@ class CounterView extends StackedView<CounterViewModel> {
         child: const Icon(Icons.add),
       ),
     );
+  }
+
+  ///use this to pass data from open view to viewModel
+  @override
+  void onViewModelReady(CounterViewModel viewModel) {
+    viewModel.updateCounterFromHome(startIndex);
   }
 
   @override
